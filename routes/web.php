@@ -55,3 +55,11 @@ Route::put('/laporan/{id}', [LaporanController::class, 'update'])
 /// HAPUS LAPORAN (opsional)
 Route::delete('/laporan/{id}', [LaporanController::class, 'destroy'])
     ->name('laporan.destroy');
+
+Route::get('/artikel', function () {
+    return view('artikel');
+});
+
+Route::get('/chat', function () {
+    return view('chat');
+})->name('chat');

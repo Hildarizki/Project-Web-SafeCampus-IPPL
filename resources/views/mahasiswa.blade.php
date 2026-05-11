@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SafeCampus Dashboard</title>
+
   <style>
     * {
       margin: 0;
@@ -34,13 +35,22 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
       font-size: 28px;
       font-weight: bold;
       margin-bottom: 40px;
     }
 
+    .logo img {
+      width: 40px;
+    }
+
     .menu a {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       text-decoration: none;
       color: white;
       padding: 15px 18px;
@@ -48,6 +58,10 @@
       border-radius: 14px;
       font-size: 18px;
       transition: 0.3s;
+    }
+
+    .menu a img {
+      width: 22px;
     }
 
     .menu a.active,
@@ -187,25 +201,53 @@
     }
   </style>
 </head>
+
 <body>
   <div class="container">
+
+    <!-- Sidebar -->
     <div class="sidebar">
-          <div class="logo">
-             <img src="{{ asset('images/logo.png') }}">
-             <span>SafeCampus</span>
-          </div>
+      <div class="logo">
+        <img src="{{ asset('images/logo.png') }}">
+        <span>SafeCampus</span>
+      </div>
 
       <div class="menu">
-        <a href="#" class="active"><img src="{{ asset('images/Home Page.png') }}">Dashboard</a>
-        <a href="#">Buat Laporan</a><img src="{{ asset('images/Document.png') }}">
-        <a href="#">Riwayat</a><img src="{{ asset('images/Clock.png') }}">
-        <a href="#">Self Check</a><img src="{{ asset('images/Handshake Heart.png') }}">
-        <a href="#">Chat</a><img src="{{ asset('images/Chat Bubble.png') }}">
-        <a href="#">Artikel</a><img src="{{ asset('images/Page.png') }}">
+        <a href="#" class="active">
+          <img src="{{ asset('images/Home Page.png') }}">
+          Dashboard
+        </a>
+
+        <a href="#">
+          <img src="{{ asset('images/Document.png') }}">
+          Buat Laporan
+        </a>
+
+        <a href="#">
+          <img src="{{ asset('images/Clock.png') }}">
+          Riwayat
+        </a>
+
+        <a href="#">
+          <img src="{{ asset('images/Handshake Heart.png') }}">
+          Self Check
+        </a>
+
+        <a href="#">
+          <img src="{{ asset('images/Chat Bubble.png') }}">
+          Chat
+        </a>
+
+        <a href="#">
+          <img src="{{ asset('images/Page.png') }}">
+          Artikel
+        </a>
       </div>
     </div>
 
+    <!-- Main -->
     <div class="main">
+
       <div class="topbar">
         <div class="search-box">
           <input type="text" placeholder="Cari sesuatu...">
@@ -213,7 +255,7 @@
 
         <div class="profile">
           🔔
-          <img src="https://i.pravatar.cc/100" alt="profile">
+          <img src="https://i.pravatar.cc/100">
         </div>
       </div>
 
@@ -263,6 +305,7 @@
           <span class="status process">Diproses</span>
         </div>
       </div>
+
     </div>
   </div>
 </body>
